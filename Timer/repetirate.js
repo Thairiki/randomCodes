@@ -8,7 +8,3 @@ function repetirAte(){
         if (timer==0) {clearInterval(interval)}
     }, 1000) //Diminui 1 do valor do tempo limite a cada 1 segundo.
 }
-    
-    /*setInterval(() => {
-        
-    }, interval);*/
