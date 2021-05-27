@@ -1,0 +1,47 @@
+p{
+    color: red;
+    font-size: 30px;
+    font-family: Helvetica, "Comic Sans MS", arial;
+    font-weight: 1000
+    ;
+}
+*{
+    margin: 0px;
+    border: 0px;
+}
+body{
+    background-color: black;
+}
+header{
+    background-color: orangered;
+}
+
+#warudo{
+    Background-color: Blue;
+    min-height: 20px;
+    min-width: 100px;
+}
+#div1{
+    background-color: green;
+    min-height: 100px;
+    min-width: 100px;
+    float: left;
+    }
+#div2{
+    background-color: red;
+    min-height: 100px;
+    min-width: 100px;
+    float: right;
+    color: black;
+}
+#div3{
+    clear: both;
+    background-color: yellow;
+    min-height: 100px;
+    min-width: 100px;
+}
+footer{
+    background-color: purple;
+    min-width: 100px;
+    min-height: 100px;
+}
