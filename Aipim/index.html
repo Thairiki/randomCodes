@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murilo Bada | Lista séries</title>
+
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        main {
+            width: 200px;
+            height: 250px;
+            border: 3px black solid;
+            text-align: center;
+            border-radius: 10px;
+            background-color: rgba(247, 162, 131, 0.671);
+        }
+
+        main ul {
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h3>Séries disponíveis</h3>
+
+        <ul>
+            <li>
+                <p>Attack on Titan</p>
+            </li>
+            <li>
+                <p>Naruto: Shippuden</p>
+            </li>
+            <li>
+                <p>Grey's Anatomy</p>
+            </li>
+            <li>
+                <p>Gin no Saji</p>
+            </li>
+            <li>
+                <p>Sora yori mo tooi basho</p>
+            </li>
+        </ul>
+
+    </main>
+    <hr>
+    <input id="nome" type="text" value="Attack on Titan" placeholder="Nome da série">
+    <input id="ep" type="number" value="90" placeholder="episódios assistidos">
+    <button onclick="verifica()">Enviar</button>
+
+    <script>
+        var nome = document.querySelector('#nome')
+        var episodio = document.querySelector('#ep')
+
+        var serie_list = [
+            ['Attack on Titan', 100, 20],
+            ['Naruto: Shippuden', 500, 20],
+            ["Grey's Anatomy", 450, 40],
+            ['Gin no Saji', 36, 20],
+            ['Sora yori mo tooi basho', 12, 20]
+        ]
+
+        function verifica() {
+            var tempoTotal, tempoAtual, tempoRestante
+            for (let i = 0; i < serie_list.length; i++) {
+                if (serie_list[i][0] == nome.value){
+                    tempoTotal = parseInt(serie_list[i][1]) * parseInt(serie_list[i][2])
+                    console.log(tempoTotal)
+                    tempoAtual = parseInt(episodio.value) * parseInt(serie_list[i][2])
+                    console.log(tempoAtual)
+                    tempoRestante = parseInt(tempoTotal) - parseInt(tempoAtual)
+                    console.log(tempoRestante)
+                    console.log("Faltam " + tempoRestante + " minutos para você finalizar a série: " + nome.value)
+                break
+            }
+                else {console.log("Não encontrado")}
+                i++
+            }
+            }
+    </script>
+</body>
+
+</html>
